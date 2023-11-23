@@ -1,0 +1,24 @@
+{
+
+	"admin/arc": {
+		"title": "Auto Reboot",
+		"order": 32,
+		"action": {
+			"type": "firstchild",
+			"recurse": true
+		}
+	},
+
+        "admin/arc/pingcontrol": {
+                "title": "Ping Control",
+		"order": 90,
+                "action": {
+                        "type": "view",
+                        "path": "pingcontrol/pingcontrol"
+                },
+                "depends": {
+                        "acl": [ "luci-app-pingcontrol" ],
+                        "uci": { "pingcontrol": true }
+                }
+        }
+}
